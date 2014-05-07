@@ -1,7 +1,7 @@
 <?php
     //ini_set('memory_limit', '1024M');
     //ini_set('max_execution_time', 300); //300 = 5m
-    $fibonacci = fibonacciBench(isset($_GET['max_numbers']) ? $_GET['max_numbers'] : 100); // 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
+    $fibonacci = php_fibonacci_bench(isset($_GET['max_numbers']) ? $_GET['max_numbers'] : 100); // 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -119,7 +119,7 @@
 * @param int $in Chosen starting point of the sequence
 * @return array The fibonacci numbers with php processing information
 */
-function fibonacciBench($max = 10, $in = 1)
+function php_fibonacci_bench($max = 10, $in = 1)
 {
     $current = 0;
 
